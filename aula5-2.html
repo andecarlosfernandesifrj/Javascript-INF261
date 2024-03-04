@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 5.2</title>
+    <style>
+        .texto{
+            color: brown;
+            font-family: "Lucida Sans";
+            font-style: italic;
+        }
+        .titulo{
+            color: white;
+            background-color: black;
+            border: solid 4px purple;
+        }
+    </style>
+</head>
+<body style="font-size: 30px;">
+    <button onclick="alterar();" style="font-size: 20px;">Alterar texto</button>
+    <h2 class="titulo"> Aula 5-2</h2>
+    <h3 class="texto"> Pegando elementos pela Classe.</h3>
+    <h3 class="texto"> Aprendendo o comando <i>getElementsByClassName.</i></h3>
+    <h3 class="texto"> Este comando retorna um vetor.</h3>
+    <script>
+        function alterar(){
+            document.getElementsByClassName('titulo')[0].innerHTML = "Alterei o título pela classe!"
+            
+            document.getElementsByClassName('texto')[1].innerHTML = "Alterei o h3 pela classe!"
+            
+            document.getElementsByClassName('texto')[2].innerHTML = "Alterei o texto e a cor do h3 pela classe!"
+            document.getElementsByClassName('texto')[2].style.color = "blue";
+        }
+    </script>
+</body>
+</html>
