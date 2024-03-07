@@ -20,14 +20,17 @@
 <body style="font-size: 28px;">
     <button onclick="alterar();" style="font-size: 20px;">Alterar texto</button>
     <h2 class="titulo"> Aula 6</h2>
-    <h3 class="texto"> Pegando elementos pelo comando QuerySelector.</h3>
-    <h3 class="texto"> Aprendendo o comando <i>querySelectorAll.</i></h3>
-    <h3>Também utilizaremos um looping.</h3>
+    <h3 class="texto">Texto 1.</h3>
+    <h3 class="texto">Texto 2</h3>
+    <h3 class="texto">Texto 3.</h3>
+    <h3 class="texto">Texto 4</h3>
+    <h3 class="texto">Texto 5</h3>
+    <h3 class="texto">Texto 6.</h3>
     <script>
         function alterar(){
             const x = document.querySelectorAll('h3.texto');
-            x[0].style.color = "blue";
-            x[1].style.color = "blue";
+            for(let a=0;a<x.length;a++)
+                x[a].style.fontFamily = "Courrier";      
         }
     </script>
 </body>
