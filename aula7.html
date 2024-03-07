@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+</head>
+<body style="font-size: 30px;">
+    <h3>Utilizando a função oninput para alterar o texto digitado pelo usuário.</h3>
+    <label for="nome">Nome:</label>
+    <input style="height: 30px;width: 200px;font-size: 20px;" type="text" id="nome" oninput="converter();">
+    <script>
+        function converter(){
+            const caixa = document.getElementById("nome");
+            caixa.value = caixa.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
