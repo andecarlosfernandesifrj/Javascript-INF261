@@ -7,12 +7,18 @@
 </head>
 <body style="font-size: 30px;">
     <h3>Utilizando a função oninput para alterar o texto digitado pelo usuário.</h3>
+    <form name="formulario" action="validar.php" onsubmit="return validarFormulario()" method="post">
     <label for="nome">Nome:</label>
-    <input style="height: 30px;width: 200px;font-size: 20px;" type="text" id="nome" oninput="converter();">
+    <input style="height: 30px;width: 200px;font-size: 20px;" type="text" id="nome">
+    <input style="height: 30px;width: 60px;font-size: 20px;" type="Submit" value="Enviar">
+    </form>
     <script>
-        function converter(){
+        function validarFormulario(){
             const caixa = document.getElementById("nome");
-            caixa.value = caixa.value.toUpperCase();
+            if(caixa.value==""){
+                alert("Preencha o nome!");
+                return false;
+            }
         }
     </script>
 </body>
