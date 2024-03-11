@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aula 9</title>
+</head>
+<body>
+    <div style="background-color: rgba(21, 158, 88, 0.7);width: 200px;height: 50px;" onmouseover="mOver(this)" onmouseout="mOut(this)" onclick="mClick(this)">
+       <p style="font-size: 25px;">Passe o mouse</p>
+    </div>
+    <script>
+        function mOver(obj){
+            obj.innerHTML = "Fluzão!"
+            obj.style.color = "white"
+            obj.style.fontSize = "35px"
+        }
+        function mOut(obj){
+            obj.innerHTML = "Fluminense!"
+            obj.style.color = "red"
+            obj.style.fontSize = "35px"
+        }
+        function mClick(obj){
+            obj.innerHTML = "Flamengo!"
+            obj.style.color = "red"
+            obj.style.backgroundColor = "black"
+            obj.style.fontSize = "35px"
+        }
+    </script>
+</body>
+</html>
