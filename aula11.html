@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aula 11</title>
+</head>
+<body style="font-size: 30px;">
+    <p id="ex"></p>
+    <button onclick="setInterval(relogio,1000)">Iniciar relógio</button>
+    <button onclick="parar()">Parar relógio</button>
+    <script>
+        const intervalo = setInterval(relogio,1000);
+        function relogio(){
+            const data = new Date();
+            document.getElementById("ex").innerHTML = data.toLocaleTimeString();
+        }
+        function parar(){
+            clearInterval(intervalo);
+        }
+    </script>
+</body>
+</html>
