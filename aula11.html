@@ -5,6 +5,7 @@
 </head>
 <body style="font-size: 30px;">
     <p id="ex"></p>
+    <button onclick="botao()">Ocultar relógio</button>
     <button onclick="setInterval(relogio,1000)">Iniciar relógio</button>
     <button onclick="parar()">Parar relógio</button>
     <script>
@@ -15,6 +16,17 @@
         }
         function parar(){
             clearInterval(intervalo);
+        }
+        function botao(){
+            const botao = document.getElementsByTagName("button")[0];
+            if(botao.innerHTML=="Ocultar relógio"){
+                 document.getElementById("ex").style.color = "white";
+                botao.innerHTML = "Exibir relógio";
+            }else{
+                document.getElementById("ex").style.color = "black";
+                botao.innerHTML = "Ocultar relógio";
+            }
+
         }
     </script>
 </body>
