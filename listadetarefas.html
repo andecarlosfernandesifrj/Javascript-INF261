@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <label for="tarefa">Tarefa:</label><br>
+    <input type="text" id="tarefa">
+    <button onclick="cadastrar();">Cadastrar</button>
+    <div id="principal"></div>
+
+    <script>
+        function cadastrar(){
+            const caixa = document.createElement("div");
+            const span = document.createElement("span");
+            const texto = document.getElementById("tarefa").value;
+            span.innerHTML = texto;
+            caixa.appendChild(span);
+            const principal = document.getElementById("principal");
+            principal.appendChild(caixa);
+        }
+    </script>
+</body>
+</html>
